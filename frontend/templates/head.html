@@ -1,0 +1,81 @@
+{% load static %}
+<!-- Meta Tags -->
+<title>{{ title_tag }} - Stripe Payments</title>
+<meta charset="UTF-8">
+<meta name="author" content="Stripe Payments" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ meta_description|safe }}" />
+<meta name="keywords" content="{{ meta_keywords }}" />
+<meta name="theme-color" content="#f57f22" />
+{% if meta_thumbnail %}
+<meta name="image" content="https://stripe-payments.com{{ meta_thumbnail }}">
+{% else %}
+<meta name="image" content="https://stripe-payments.com{% static 'brand/stripe_payments_meta_thumbnail.jpg' %}">
+{% endif %}
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ meta_url }}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title_tag }} - Stripe Payments">
+<meta property="og:description" content="{{ meta_description|safe }}">
+<meta property="og:keywords" content="{{ meta_keywords }}">
+<meta property="og:url" content="{{ meta_url }}">
+<meta property="og:site_name" content="Stripe Payments">
+{% if meta_thumbnail %}
+<meta property="og:image" content="https://stripe-payments.com{{ meta_thumbnail }}">
+{% else %}
+<meta property="og:image" content="https://stripe-payments.com{% static 'brand/stripe_payments_meta_thumbnail.jpg' %}">
+{% endif %}
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title_tag }} - Stripe Payments">
+<meta name="twitter:description" content="{{ meta_description|safe }}">
+{% if meta_thumbnail %}
+<meta name="twitter:image" content="https://stripe-payments.com{{ meta_thumbnail }}">
+{% else %}
+<meta name="twitter:image" content="https://stripe-payments.com{% static 'brand/stripe_payments_meta_thumbnail.jpg' %}">
+{% endif %}
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:image:height" content="600">
+<meta name="twitter:url" content="{{ meta_url }}">
+<meta name="twitter:site" content="www.stripe-payments.com">
+<meta name="twitter:creator" content="@stripe-payments">
+
+<!-- LinkedIn Meta Tags -->
+{% if meta_thumbnail %}
+<meta property="og:image" content="https://stripe-payments.com{{ meta_thumbnail }}">
+{% else %}
+<meta property="og:image" content="https://stripe-payments.com{% static 'brand/stripe_payments_meta_thumbnail.jpg' %}">
+{% endif %}
+<meta property="og:image:alt" content="{{ meta_description|safe }}">
+<meta property="linkedin:site" content="https://www.linkedin.com/company/stripe-payments/">
+
+<!-- Favicons Start -->
+<link rel="icon" type="image/icon" href="{% static 'brand/favicon/favicon.ico' %}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'brand/favicon/apple-touch-icon.png' %}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'brand/favicon/favicon-32x32.png' %}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'brand/favicon/favicon-16x16.png' %}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'brand/favicon/android-chrome-512x512.png' %}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'brand/favicon/android-chrome-192x192.png' %}" />
+<!-- Favicons End -->
+
+<!-- Manifest -->
+<link rel="manifest" href="{% static 'brand/favicon/site.webmanifest' %}" />
+
+<!-- Fontawesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+<script src="https://js.stripe.com/v3/"></script>

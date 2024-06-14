@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<main style="padding-top: 6rem;" class="error-container">
+    <section class="error-content text-center">
+        <div class="error-wrapper">
+            <i class="bi bi-exclamation-triangle display-1 text-success"></i>
+            <h1 class="display-1">404</h1>
+            <h1 class="mb-4">Success!</h1>
+            <p class="mb-4">Thank you for your purchase!</p>
+            <a class="btn btn-primary rounded-pill py-3 px-5" href="{% url 'product_list' %}">Go Back To Shop</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

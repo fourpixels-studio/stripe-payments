@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<main style="padding-top: 6rem;" class="container">
+    <h1 class="mt-5">Product details page</h1>
+    <div class="row g-3">
+        {% for product in products %}
+        <div class="col-sm-12 col-md-3">
+            <div class="product p-3 border rounded-4"> 
+                <img class="img-fluid rounded-3" src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="The cover of Stubborn Attachments" />
+                <div class="description">
+                    <h5 class="my-3">{{ product.name }}</h5>
+                    <h5>${{ product.get_display_price }}</h5>
+                </div>
+                <a href="{{ product.get_url }}" class="btn mb-3 btn-outline-dark w-100">View</a>
+                <form action="{% url 'create_checkout_session' %}" method="POST">
+                    <button class="btn btn-dark w-100" type="submit" id="checkout-button">Checkout</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
