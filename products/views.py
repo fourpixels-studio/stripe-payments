@@ -1,9 +1,8 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Product
-from django.conf import settings
 import stripe
-from django.views import View
-from django.http import JsonResponse
+from django.conf import settings
+from django.shortcuts import render, get_object_or_404
+import stripe.error
+from .models import Product
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
