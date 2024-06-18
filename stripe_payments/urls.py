@@ -16,13 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from backend.views import CreateCheckoutSessionView
+from backend.views import CreateCheckoutSessionView, stripe_webhook, StripeIntentView, success, cancel
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("frontend.urls")),
     path("backend/", include("backend.urls")),
     path("products/", include("products.urls")),
-    path("create-checkout-session/", CreateCheckoutSessionView.as_view(),
-         name="create_checkout_session"),
+    path("create-checkout-session/<int:pk>/", CreateCheckoutSessionView.as_view(), name="create_checkout_session"),
+    path("create-payment-intent/<int:pk>/", StripeIntentView.as_view(), name="create_payment_intent"),
+    path("stripe-webhook", stripe_webhook, name="stripe_webhook"),
+    path("cancel/", cancel, name="cancel"),
+    path("success/", success, name="success"),
 ]
