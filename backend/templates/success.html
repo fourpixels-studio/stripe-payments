@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block body %}
-<main style="padding-top: 6rem;" class="error-container">
-    <section class="error-content text-center">
-        <div class="error-wrapper">
-            <i class="bi bi-exclamation-triangle display-1 text-success"></i>
-            <h1 class="display-1">404</h1>
-            <h1 class="mb-4">Success!</h1>
-            <p class="mb-4">Thank you for your purchase!</p>
-            <a class="btn btn-primary rounded-pill py-3 px-5" href="{% url 'product_list' %}">Go Back To Shop</a>
+<main style="padding-top: 6rem" class="container">
+    <section class="success-content text-center">
+        <div class="success-wrapper">
+            <i class="bi bi-check-circle display-1 text-success"></i>
+            <h1 class="display-1">Payment Successful</h1>
+            <p class="mb-4">Thank you! Your payment has been processed successfully. A confirmation email has been sent to your email address.</p>
+            <p class="mb-4">You can continue shopping.</p>
+            <a class="btn btn-dark rounded-pill py-3 px-5 mb-2" href="{% url 'product_list' %}">Continue Shopping</a>
         </div>
     </section>
 </main>
